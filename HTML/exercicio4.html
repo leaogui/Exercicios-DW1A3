@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+        <meta charset="utf-8">
+
+        <title>Exercicio 4 - IMC</title>
+        <link rel="stylesheet" type="text/css" href="css\exercicio4.css">
+
+    
+
+</head>
+
+
+
+<body>
+
+    
+<div id="tudo">
+    <div id="formu">
+
+        <p>IMC</p>
+        <hr>
+        <form id="form">
+                
+                    <div id="box">
+                    <label title="Altura">
+                        Altura <input id="alt" type="text" name="altura"> m
+                    </label>
+                     </div>
+                <br>
+                <div id="box">
+                    <label title="Peso">
+                        Peso <input id="pes" type="text" name="peso"> kg
+                    </label>
+                </div>
+                <br>    
+
+                <input id="total" name="submit" type="button" value="Resultado" onclick="final()">
+            </form>
+            
+        </div>
+
+           <p id=conc> Conclusão: <br> <textarea disabled="true" id="msg" name="msg"></textarea></p>
+
+        </div>  
+
+</body>
+
+<script type="text/javascript">
+        
+    
+
+    function Calcular(){
+
+        peso = parseFloat(document.getElementById("pes").value);
+        altura = document.getElementById("alt").value;
+        imc = (peso / (altura*altura));
+        return imc
+    }
+
+
+
+    function final(){
+
+
+
+        valor = Calcular();
+
+        
+        
+
+        if (imc <= 16.9){
+            msg = "Seu imc é:" + valor + "\nVocê está muito abaixo do peso.";
+           
+        } else if (imc <= 18.4){
+            msg = "Seu imc é:" + valor + "\nVocê está abaixo do peso.";
+            
+        } else if (imc<= 24.9){
+            msg = "Seu imc é:" + valor + "\nVocê está no peso ideal.";
+            
+        } else if (imc <= 29.9){
+            msg = "Seu imc é:" + valor + "\nVocê está acima do peso.";
+           
+        } else if (imc <= 34.9){
+            msg = "Seu imc é:" + valor + "\nVocê está com Obesidade grau 1.";
+            
+        } else if (imc <= 40){
+            msg = "Seu imc é:" + valor + "\nVocê está com Obesidade grau 2.";
+            
+        } else if (imc > 40){
+            msg = "Seu imc é:" + valor + "\nVocê está com Obesidade grau 3.";
+            
+        }
+
+        document.getElementById("msg").innerHTML= msg;
+        
+    }
+
+
+</script>
+
+</html>

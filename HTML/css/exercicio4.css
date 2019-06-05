@@ -1,0 +1,59 @@
+body{
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+
+
+
+}
+
+div#formu{
+
+
+    background-color: rgb(221, 205, 205); 
+    margin-right: 0%;
+    padding: 20px;
+
+
+
+
+}
+
+div#box{
+    position: relative;
+    background-color: antiquewhite;
+    padding: 10px;
+
+
+
+
+}
+
+P{
+
+    text-align: center;
+
+}
+
+input#total{
+
+
+    margin-left: 37%;
+
+
+}
+
+div#tudo{
+
+    margin-right: 80%;
+    background-color: bisque;
+    
+}
+
+p#conc{
+
+
+    text-align: center;
+
+
+}
